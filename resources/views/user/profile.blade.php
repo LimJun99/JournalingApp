@@ -62,7 +62,7 @@
                <button type="submit" value="Save" style="padding: 10px; width: 50%; background-color: #3e3e3e; color: white; border: none; border-radius: 5px; transition: background-color 0.3s;" 
                     onmouseover="this.style.backgroundColor='#ff9900';" 
                     onmouseout="this.style.backgroundColor='#3e3e3e';">
-                    <strong>Sign Up</strong>
+                    <strong>Save</strong>
                </button>
           </div>
      </form>
