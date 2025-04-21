@@ -239,7 +239,6 @@
                     }
                });
           });
-          });
      </script>
      @include('entries.components.alerts-js')
 @endsection
