@@ -90,15 +90,16 @@
                     <div class="error-message">{{ $message }}</div>
                @enderror
                <div class="label-container">
+               <div class="label-container">
                     <h3>Labels:</h3>
                     <div class="dropdown-multi-select">
                          <button type="button" class="dropdown-toggle" id="label-dropdown-toggle">Select Labels</button>
                          <div class="dropdown-menu" id="label-dropdown-menu">
-                              @foreach ($user->labels as $label)
-                                   <div class="dropdown-item">
-                                        <input type="checkbox" id="label-{{ $label->id }}" name="labels[]" value="{{ $label->id }}" {{ $entry->labels->contains($label->id) ? 'checked' : '' }}>
-                                        <label for="label-{{ $label->id }}">{{ $label->name }}</label>
-                                   </div>
+                              @foreach (\App\Models\Label::all() as $label)
+                                      <div class="dropdown-item">
+                                             <input type="checkbox" id="label-{{ $label->id }}" name="labels[]" value="{{ $label->id }}" {{ $entry->labels->pluck('id')->contains($label->id) ? 'checked' : '' }}>
+                                             <label for="label-{{ $label->id }}">{{ $label->name }}</label>
+                                      </div>
                               @endforeach
                               <div id="new-label-section">
                                    <div class="dropdown-item add-label-section">
